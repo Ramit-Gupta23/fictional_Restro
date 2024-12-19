@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fictional Restaurant - Reservation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #3b0a45; /* Royal dark purple */
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #25092c;
+            color: #ffffff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            color: #ffffff;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 500;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav ul li a:hover {
+            color: #ffffff;
+        }
+
+        /* Lucrative Offers Section */
+        .offers-section {
+            background-color: #25092c;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .offers-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .offers-section p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        /* Membership Cards */
+        .membership-cards {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .membership-card {
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+            width: 280px;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .membership-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .membership-card ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .membership-card ul li {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        /* Background Gradients for Each Membership */
+        .basic-membership {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f); /* Dark Blue Gradient */
+        }
+
+        .premium-membership {
+            background: linear-gradient(135deg, #3e0c4f, #9a1f21); /* Dark Reddish-Brown Gradient */
+        }
+
+        /* Dark Golden Gradient for Elite Membership */
+        .elite-membership {
+            background: linear-gradient(135deg, #b89e55, #d4af37); /* Dark Golden Gradient */
+        }
+
+        /* Reservation Section */
+        .reservation-section {
+            padding: 80px 20px;
+            text-align: center;
+            background: url('reserve.jpg') no-repeat center center/cover;
+            position: relative;
+            color: #ffffff;
+        }
+
+        .reservation-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+        }
+
+        .reservation-section h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            margin-bottom: 20px;
+            z-index: 1;
+            position: relative;
+        }
+
+        .reservation-form {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+            position: relative;
+            z-index: 2;
+        }
+
+        .reservation-form input, .reservation-form select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #333;
+            box-sizing: border-box;
+        }
+
+        .reservation-form button {
+            width: 100%;
+            padding: 12px;
+            background-color: #ffffff;
+            color: #3b0a45;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .reservation-form button:hover {
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">Fictional Restaurant</div>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="reservation.html">Reservations</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Lucrative Offers Section -->
+<section class="offers-section">
+    <h2>Exclusive Membership Offers</h2>
+    <p>Explore our membership options and enjoy exclusive perks!</p>
+
+    <div class="membership-cards">
+        <!-- Basic Membership -->
+        <div class="membership-card basic-membership">
+            <h3>Basic Membership</h3>
+            <ul>
+                <li>10% off every visit</li>
+                <li>Priority booking on weekends</li>
+                <li>Free appetizer on your birthday</li>
+            </ul>
+        </div>
+
+        <!-- Premium Membership -->
+        <div class="membership-card premium-membership">
+            <h3>Premium Membership</h3>
+            <ul>
+                <li>15% off every visit</li>
+                <li>Priority booking & VIP seating</li>
+                <li>Free dessert every visit</li>
+                <li>Exclusive invites to events</li>
+            </ul>
+        </div>
+
+        <!-- Elite Membership -->
+        <div class="membership-card elite-membership">
+            <h3>Elite Membership</h3>
+            <ul>
+                <li>20% off every visit</li>
+                <li>Free drinks with every meal</li>
+                <li>Priority access to private events</li>
+                <li>Complimentary tasting menu once a year</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Reservation Section -->
+<section class="reservation-section">
+    <h1>Book a Table</h1>
+    <p>Reserve your spot at Fictional Restaurant for an unforgettable dining experience!</p>
+
+    <div class="reservation-form">
+        <form id="reservationForm">
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email Address" required>
+            <input type="date" id="reservationDate" required>
+            <select id="time" required>
+                <option value="">Select Time</option>
+                <option value="18:00">6:00 PM</option>
+                <option value="19:00">7:00 PM</option>
+                <option value="20:00">8:00 PM</option>
+            </select>
+            <button type="submit">Reserve Now</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Fictional Restaurant. All rights reserved.</p>
+</footer>
+
+<script>
+    document.getElementById("reservationForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        alert("Reservation submitted! We will contact you soon.");
+    });
+</script>
+
+</body>
+</html>
+

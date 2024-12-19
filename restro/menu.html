@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fictional Restaurant - Menu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+ /* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #3b0a45; /* Royal dark purple */
+    color: #fff;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #25092c;
+    color: #ffffff; /* White font color */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: #ffffff; /* White font color */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff; /* White font color */
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #ffd700; /* Yellow color for hover */
+}
+
+/* Hero Section */
+#hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: url('back.jpg') no-repeat center center/cover;
+    position: relative;
+    color: #ffffff; /* White text color */
+}
+
+#hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for better contrast */
+}
+
+#hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    margin-bottom: 20px;
+    z-index: 1;
+    position: relative;
+}
+
+#hero p {
+    font-size: 22px;
+    font-weight: 400;
+    z-index: 1;
+    position: relative;
+}
+
+/* Menu Section */
+.menu-section {
+    padding: 50px 20px;
+    background-color: #25092c;
+}
+
+.menu-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #ffffff; /* White font color */
+}
+
+.menu-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.menu-column {
+    width: 300px;
+}
+
+.menu-column h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ffffff; /* White font color */
+    text-align: center;
+}
+
+.menu-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.8);
+}
+
+.menu-item h4 {
+    font-size: 20px;
+    color: #ffffff; /* White font color */
+    margin-bottom: 10px;
+}
+
+.menu-item p {
+    font-size: 16px;
+    color: #ffffff; /* White font color */
+    margin-bottom: 10px;
+}
+
+.menu-item .price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffd700; /* Yellow color for price */
+}
+
+.menu-item .description {
+    font-size: 14px;
+    color: #ddd; /* Light gray color for description */
+    margin-bottom: 15px;
+}
+
+.menu-item .order-btn {
+    display: block;
+    width: 100%;
+    background-color: #ffd700; /* Yellow button */
+    color: #3b0a45; /* Dark purple text */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+.menu-item img.menu-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.menu-item .order-btn:hover {
+    background-color: #e6c200; /* Lighter yellow on hover */
+}
+
+/* Footer */
+footer {
+    background-color: #25092c;
+    padding: 30px 50px;
+    text-align: center;
+    color: #ffffff; /* White font color */
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.6);
+}
+
+footer p {
+    font-size: 14px;
+}
+
+footer a {
+    color: #ffd700; /* Yellow font color for links */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">Fictional Restaurant</div>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="reservation.html">Reservations</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="hero">
+    <h1>Our Exquisite Menu</h1>
+    <p>Explore our wide range of mouth-watering dishes, prepared with love and perfection.</p>
+</section>
+
+<section class="menu-section">
+    <h2>Featured Dishes</h2>
+    <div class="menu-container">
+        <div class="menu-column">
+            <h3>Appetizers</h3>
+            <div class="menu-item">
+                <img src="spring.jpg" alt="Spring Rolls" class="menu-image">
+                <h4>Spring Rolls</h4>
+                <p class="description">Crispy rolls stuffed with fresh vegetables and served with a tangy dipping sauce.</p>
+                <p class="price">₹1199</p>
+                <a href="#" class="order-btn">Order Now</a>
+            </div>
+            <div class="menu-item">
+                <img src="wings.jpg" alt="Chicken Wings" class="menu-image">
+                <h4>Chicken Wings</h4>
+                <p class="description">Crispy wings tossed in a tangy buffalo sauce, served with a side of creamy ranch dip.</p>
+                <p class="price">₹1099</p>
+                <a href="#" class="order-btn">Order Now</a>
+            </div>
+            <div class="menu-item">
+                <img src="mushroom.jpg" alt="Stuffed Mushrooms" class="menu-image">
+                <h4>Stuffed Mushrooms</h4>
+                <p class="description">Mushrooms filled with a savory blend of cheese, garlic, and herbs, baked to perfection.</p>
+                <p class="price">₹999</p>
+                <a href="#" class="order-btn">Order Now</a>
+            </div>
+            
+        </div>
+
+        <div class="menu-column">
+            <h3>Main Courses</h3>
+            <div class="menu-item">
+                <img src="salmon.avif" alt="Grilled Salmon" class="menu-image">
+                <h4>Grilled Salmon</h4>
+                <p class="description">Perfectly grilled salmon with a side of seasoned vegetables and mashed potatoes.</p>
+                <p class="price">₹3999</p>
+                <a href="#" class="order-btn">Order Now</a>
+            </div>
+            <div class="menu-item">
+                <img src="spag.jpg" alt="Spaghetti Bolognese" class="menu-image">
+                <h4>Spaghetti Bolognese</h4>
+                <p class="description">Classic pasta with a rich tomato and meat sauce.</p>
+                <p class="price">₹1999</p>
+                <a href="#" class="order-btn">Order Now</a>
+            </div>
+            <div class="menu-item">
+                <img src="tofu.jpg" alt="Vegetable Stir-Fry with Tofu" class="menu-image">
+                <h4>Vegetable Stir-Fry with Tofu</h4>
+                <p class="description">Fresh veggies and tofu stir-fried in a savory soy sauce.</p>
+                <p class="price">₹1299</p>
+                <a href="#" class="order-btn">Order Now</a>
+            </div>
+        </div>
+
+        <div class="menu-column">
+            <h3>Desserts</h3>
+            <div class="menu-item">
+                <img src="choco.webp" alt="Chocolate Mousse" class="menu-image">
+                <h4>Chocolate Mousse</h4>
+                <p class="description">A rich and velvety chocolate mousse topped with whipped cream.</p>
+                <p class="price">₹399</p>
+                <a href="#" class="order-btn">Order Now</a>
+            </div>
+            <div class="menu-item">
+                <img src="cheese cakes.jpg" alt="Cheesecake" class="menu-image">
+                <h4>Cheesecake</h4>
+                <p class="description">Classic cheesecake with a buttery graham cracker crust and a smooth filling.</p>
+                <p class="price">₹699</p>
+                <a href="#" class="order-btn">Order Now</a>
+            </div>
+            <div class="menu-item">
+                <img src="tiram.jpeg" alt="Tiramisu" class="A classic Italian dessert with layers of coffee-soaked ladyfingers and mascarpone cream.">
+                <h4>Tiramisu</h4>
+                
+                <p class="description">Classic cheesecake with a buttery graham cracker crust and a smooth filling.</p>
+                <p class="price">₹499</p>
+                <a href="#" class="order-btn">Order Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Fictional Restaurant | <a href="#">Privacy Policy</a></p>
+</footer>
+
+</body>
+</html>
+
